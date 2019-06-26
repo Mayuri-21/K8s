@@ -1,0 +1,33 @@
+I0626 07:19:50.877729       1 main.go:514] Determining IP address of default interface
+I0626 07:19:50.878378       1 main.go:527] Using interface with name enp0s3 and address 10.0.2.15
+I0626 07:19:50.878417       1 main.go:544] Defaulting external address to interface address (10.0.2.15)
+I0626 07:19:51.001172       1 kube.go:126] Waiting 10m0s for node controller to sync
+I0626 07:19:51.076177       1 kube.go:309] Starting kube subnet manager
+I0626 07:19:52.080121       1 kube.go:133] Node controller sync successful
+I0626 07:19:52.080149       1 main.go:244] Created subnet manager: Kubernetes Subnet Manager - master-node
+I0626 07:19:52.080155       1 main.go:247] Installing signal handlers
+I0626 07:19:52.080429       1 main.go:386] Found network config - Backend type: vxlan
+I0626 07:19:52.080565       1 vxlan.go:120] VXLAN config: VNI=1 Port=0 GBP=false DirectRouting=false
+I0626 07:19:52.159396       1 main.go:351] Current network or subnet (10.244.0.0/16, 192.168.0.0/24) is not equal to previous one (0.0.0.0/0, 0.0.0.0/0), trying to recycle old iptables rules
+I0626 07:19:52.164357       1 iptables.go:167] Deleting iptables rule: -s 0.0.0.0/0 -d 0.0.0.0/0 -j RETURN
+I0626 07:19:52.167561       1 iptables.go:167] Deleting iptables rule: -s 0.0.0.0/0 ! -d 224.0.0.0/4 -j MASQUERADE --random-fully
+I0626 07:19:52.179809       1 iptables.go:167] Deleting iptables rule: ! -s 0.0.0.0/0 -d 0.0.0.0/0 -j RETURN
+I0626 07:19:52.188870       1 iptables.go:167] Deleting iptables rule: ! -s 0.0.0.0/0 -d 0.0.0.0/0 -j MASQUERADE --random-fully
+I0626 07:19:52.191257       1 main.go:317] Wrote subnet file to /run/flannel/subnet.env
+I0626 07:19:52.191277       1 main.go:321] Running backend.
+I0626 07:19:52.191287       1 main.go:339] Waiting for all goroutines to exit
+I0626 07:19:52.191309       1 vxlan_network.go:60] watching for new subnet leases
+I0626 07:19:52.197663       1 iptables.go:145] Some iptables rules are missing; deleting and recreating rules
+I0626 07:19:52.197693       1 iptables.go:167] Deleting iptables rule: -s 10.244.0.0/16 -d 10.244.0.0/16 -j RETURN
+I0626 07:19:52.272629       1 iptables.go:145] Some iptables rules are missing; deleting and recreating rules
+I0626 07:19:52.272664       1 iptables.go:167] Deleting iptables rule: -s 10.244.0.0/16 -j ACCEPT
+I0626 07:19:52.273459       1 iptables.go:167] Deleting iptables rule: -s 10.244.0.0/16 ! -d 224.0.0.0/4 -j MASQUERADE --random-fully
+I0626 07:19:52.274327       1 iptables.go:167] Deleting iptables rule: -d 10.244.0.0/16 -j ACCEPT
+I0626 07:19:52.275100       1 iptables.go:167] Deleting iptables rule: ! -s 10.244.0.0/16 -d 192.168.0.0/24 -j RETURN
+I0626 07:19:52.275565       1 iptables.go:155] Adding iptables rule: -s 10.244.0.0/16 -j ACCEPT
+I0626 07:19:52.276058       1 iptables.go:167] Deleting iptables rule: ! -s 10.244.0.0/16 -d 10.244.0.0/16 -j MASQUERADE --random-fully
+I0626 07:19:52.276965       1 iptables.go:155] Adding iptables rule: -s 10.244.0.0/16 -d 10.244.0.0/16 -j RETURN
+I0626 07:19:52.278461       1 iptables.go:155] Adding iptables rule: -d 10.244.0.0/16 -j ACCEPT
+I0626 07:19:52.374866       1 iptables.go:155] Adding iptables rule: -s 10.244.0.0/16 ! -d 224.0.0.0/4 -j MASQUERADE --random-fully
+I0626 07:19:52.473099       1 iptables.go:155] Adding iptables rule: ! -s 10.244.0.0/16 -d 192.168.0.0/24 -j RETURN
+I0626 07:19:52.475926       1 iptables.go:155] Adding iptables rule: ! -s 10.244.0.0/16 -d 10.244.0.0/16 -j MASQUERADE --random-fully

@@ -1,0 +1,10 @@
+W0626 07:18:11.682035       1 server_others.go:249] Flag proxy-mode="" unknown, assuming iptables proxy
+I0626 07:18:11.692965       1 server_others.go:143] Using iptables Proxier.
+I0626 07:18:11.693705       1 server.go:534] Version: v1.15.0
+I0626 07:18:11.706380       1 conntrack.go:52] Setting nf_conntrack_max to 131072
+I0626 07:18:11.707156       1 config.go:187] Starting service config controller
+I0626 07:18:11.707179       1 controller_utils.go:1029] Waiting for caches to sync for service config controller
+I0626 07:18:11.707224       1 config.go:96] Starting endpoints config controller
+I0626 07:18:11.707240       1 controller_utils.go:1029] Waiting for caches to sync for endpoints config controller
+I0626 07:18:11.808022       1 controller_utils.go:1036] Caches are synced for service config controller
+I0626 07:18:11.808342       1 controller_utils.go:1036] Caches are synced for endpoints config controller
